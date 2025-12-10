@@ -63,8 +63,24 @@ def menu_campus(campus):
             print("Opção inválida.")
 
 def main():
+    # Campus e cursos pré-definidos
     campi = []
-
+    
+    # Campus Itapajé
+    campus_itapaje = CampusLista("Itapajé")
+    campus_itapaje.cadastrar_curso("Analise e Desenvolvimento de Sistemas", 3200)
+    campus_itapaje.cadastrar_curso("Ciências de Dados", 2800)
+    campus_itapaje.cadastrar_curso("Segurança da Informação", 2400)
+    campi.append(campus_itapaje)
+    
+    # Campus Pici
+    campus_pici = CampusLista("Pici")
+    campus_pici.cadastrar_curso("Ciências da Computação", 3200)
+    campus_pici.cadastrar_curso("Matemática", 2880)
+    campus_pici.cadastrar_curso("Sistemas e Mídias Digitais", 2880)
+    campi.append(campus_pici)
+    
+    print("Sistema iniciado com 2 campi e cursos já cadastrados!\n")
     while True:
         opcao = menu()
 
